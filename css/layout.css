@@ -1,0 +1,29 @@
+.body{
+    display: grid;
+    grid-template-columns: 70vw 30vw;
+    gap: 1em;
+    
+}
+.main-content,.card,.register{
+    grid-column: 1 / span 2;
+}
+
+
+@media (min-width: 800px) {
+    .body{
+        grid-column: auto auto;
+    }
+    .main-content {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    .card{
+        grid-column: 2 / span 1;
+    }
+    .register{
+        grid-column: 2 / span 1; 
+        grid-row: 2 / span 1;   
+    }
+    
+}
