@@ -1,0 +1,28 @@
+.field {
+    position: relative;
+}
+
+
+.required + span::before,
+.email + span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url(../images/icon-error.svg);
+    object-fit: contain;
+    width: 2rem;
+    height: 2rem;
+}
+
+.required + span:after {
+    content: attr(data-field) ' can not empy';
+    color: tomato;
+}
+
+.email + span:after {
+    content: attr(data-field);
+    color: red;
+}
