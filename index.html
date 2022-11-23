@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="./css/style.css">
-  
+  <script defer src="./js/validate.js"></script>  
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 <body class="body">
@@ -23,15 +23,16 @@
 
   <div class="card"><strong class="featured-text">Try it free 7 days</strong> then $20/mo. thereafter</div>
 
-  <form class="fields">
+  <form id="my-form" class="fields">
     
     <label class="field">
       <!-- Añadir al input la clase required para ver mensaje -->
       <input 
-        class="form-control required"
-        type="text" 
-        placeholder="First Name"
-        required>
+        class="form-control"
+        type="text"
+        id="first-name"
+        required 
+        placeholder="First Name">
         <span data-field="First Name"></span>
     </label>
 
@@ -39,9 +40,10 @@
       <!-- Añadir al input la clase required para ver mensaje -->
       <input 
         class="form-control" 
-        type="text" 
-        placeholder="Last Name"
-        required>
+        type="text"
+        id="last-name"
+        required
+        placeholder="Last Name">
         <span data-field="Last Name"></span>
       </label>
 
@@ -49,15 +51,18 @@
       <!-- Añadir al input la clase email para ver mensaje -->
       <input 
         class="form-control email" 
-        type="email" 
+        type="email"
+        id="email" 
         placeholder="Email Address">
         <span data-field="Looks like this is not an email"></span>
     </label>
 
     <label class="field">
       <input
-        class="form-control required" 
+        class="form-control"
+        id="password" 
         type="password"
+        required
         placeholder="Password">
         <span data-field="Password"></span>
     </label>

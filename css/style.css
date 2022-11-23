@@ -3,8 +3,8 @@
 }
 
 
-.required + span::before,
-.email + span::before{
+.required:invalid + span::before,
+.email:invalid + span::before{
     content: '';
     position: absolute;
     top: 0;
@@ -17,12 +17,12 @@
     height: 2rem;
 }
 
-.required + span:after {
+.required:invalid + span:after {
     content: attr(data-field) ' can not empy';
     color: tomato;
 }
 
-.email + span:after {
+.email:invalid + span:after {
     content: attr(data-field);
     color: red;
 }
